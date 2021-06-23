@@ -1,37 +1,38 @@
-# Front End Nanodegree Program
+# Landing Page Project
 
-Front End Nanodegree Content & Project Resources
+Creating landing page with dynamic navigation bar and active styling of sections on scroll
 
-## Table of Contents
+## Global Variables
 
-* [Projects](#projects)
-* [Courses](#courses)
-* [Style-Guide](#style-guide)
+* Document Fragment
+* Sections
+* Nav Bar List
+* Burger Menu
+* Burger Mobile Menu List
 
-## Projects
+## Functions
 
-The following is a list of current projects required to complete the Front End Nanodegree.
+* [menuListCreation](#menuListCreation)
+* [Active Section Styling](#active-section-styling)
+* [activeNavStyle](#activeNavStyle)
 
-Note that projects that do not include associated starter code are not linked here.
+## menuListCreation
 
-1. Personal Blog Website
-2. [Landing Page](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
-3. [Weather Journal App](https://github.com/udacity/fend/tree/refresh-2019/projects/weather-journal-app)
-4. [Evaluate A News Article with Natural Language Processing](https://github.com/udacity/fend/tree/refresh-2019/projects/evaluate-news-nlp)
-5. Capstone - Travel App
+* Used to select through the sections with their data-nav attribute
+* Creates menu items with names similar to the data-nav or section titles
+* Adds the menu items to a fragment to enhance performance
+* Appends the menu items to the desktop or mobile navigation list
+* Desktop or mobile nav menu are added as arguments
 
-## Courses
+## Active Section Styling
 
-The following is a list of the courses associated with the Front End Nanodegree.
+* This is an anonymous function
+* When scrolling through the window it gets the top section y-coordinate
+* If the section is withing a certain viewport the section is styles differently (to show it is the active section)
+* Otherwise the active style is removed and added to the relevant section if it's withing a certain viewport
 
-* C1 - CSS, Website Layout, Website Components
-* C2 - JavaScript & The DOM
-* C3 - Web API's and Asynchronous Applications
-* C4 - Build Tools and Single Page Web Apps
-* C5 - Capstone
+## activeNavStyle
 
-## Style-Guide
-
-See below for the Udacity Style Guide used thoroughout the Front End Nanodegree.
-
-* [Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/)
+* Checks which section is active
+* Adds an active style to the nav menu item (desktop or mobile) when a certain section is active
+* Desktop or mobile menu items list are added as arguments
